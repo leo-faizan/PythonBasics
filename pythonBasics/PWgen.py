@@ -7,14 +7,14 @@ passcode = ''
 numbers = int(input("enter the number of integers needed in the password: "))
 letters = int(input("enter the number of letters neede in the password: "))
 
-for i in range(1, numbers):
-    passcode += st.printable[0]
+for i in range(numbers):
+    passcode += st.printable[random.randint(0,9)]
 
-for i in range(numbers, letters):
-    passcode += st.printable[1]
+for i in range(numbers, numbers+letters):
+    passcode += st.printable[random.randint(11, 58)]
 
 for i in range(numbers+letters, len):
-    passcode += st.printable[random.randint(58, 70)]
+    passcode += st.printable[random.randint(62, 85)]
 
 
 print(passcode)
